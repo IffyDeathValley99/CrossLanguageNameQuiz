@@ -4,6 +4,8 @@ body {
     font-size: large;
     color-scheme: dark;
     color: white;
+    font-size: 16pt;
+    margin-top: 0px;
 }
 .game-grid {
     margin-top: 25vh;
@@ -20,6 +22,7 @@ body {
     flex-direction:  row;
     width: 80vh;
     justify-content: space-between; 
+    
 }
 .input-title {
     text-align: center;
@@ -40,12 +43,13 @@ body {
     border-width: 0.25px;   
     border-style: solid;
     border-color: white;
+    margin-right: 5px;
     background-color: rgba(128, 128, 128, 0.05);
 }
 input {
     width: 80vh;
     height: 5vh;
-    font-size: x-large;
+    font-size: 24pt;
     border-radius: 10px;
     text-align: center;
     border-width: 0.25px;   
