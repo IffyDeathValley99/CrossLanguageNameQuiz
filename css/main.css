@@ -7,11 +7,11 @@ body {
     background-color: black;
     color: white;
     background: rgb(97, 42, 133);
-    background: linear-gradient(5deg, rgba(97,42,133,1) 0%, rgb(24, 33, 129) 70%, rgb(58, 199, 214) 100%); 
+    background: linear-gradient(5deg, rgba(0, 0, 0, 0.95) 0%, rgb(97, 42, 133) 70%, rgb(58, 199, 214) 100%); 
   }
 button {
   font-size: x-large;
-  margin-top: 15vh;
+  margin-top: 1.5vh;
   width: 50vh;
   height: 10vh;
   border-radius: 4vh;
@@ -21,4 +21,10 @@ button {
 }
 button:hover {
   background-color: rgb(31,32,34);
+}
+.select-flexbox {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  flex-direction: column;
 }
