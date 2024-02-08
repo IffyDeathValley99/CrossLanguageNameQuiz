@@ -6,8 +6,7 @@ body {
     align-items: center;
     background-color: black;
     color: white;
-    background: rgb(97, 42, 133);
-    background: linear-gradient(5deg, rgba(0, 0, 0, 0.95) 0%, rgb(97, 42, 133) 70%, rgb(58, 199, 214) 100%); 
+    background-color: rgba(0, 0, 0, 0.9);
   }
 button {
   font-size: x-large;
