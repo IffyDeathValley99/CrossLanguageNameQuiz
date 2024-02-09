@@ -1,9 +1,4 @@
 let namesList;
-let currentPeople = [
-    ["Mahatma Ghandi", "God"], 
-    ["マハトマ・ガンジー", "神様"], 
-    ["Description for Ghandi Soon?", "One of the gods of all time"]
-];
 
 var data;
 fetch("../data.json", {
