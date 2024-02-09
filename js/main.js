@@ -37,7 +37,12 @@ function setLanguages () {
     // Set currentPeople
 }
 function newName () {
+    var save = peopleIndex;
     peopleIndex = random(0, data.length - 1);
+    if(peopleIndex === save) {
+        peopleIndex = save;
+        return newName();
+    }
     englishNames = data[peopleIndex].names;
     translatedName = data[peopleIndex].japanesename;
     singularDescription = data[peopleIndex].description;
