@@ -1,5 +1,3 @@
-let namesList = ["George Washington", "Mahatma Ghandi", "God"];
-let namesListJapanese = ["ジョージ・ワシントン", "マハトマ・ガンジー", "神様"];
 let currentNames;
 let singularName;
 let language;
@@ -21,11 +19,6 @@ function studyLater () {
 }
 setLanguages(), determineName();
 
-
-let cheese;
-
-fetch('./data.json')
-.then(function(u){ return u.json();})
-.then(function(json){cheese = json;})
-
-console.log(cheese)
+const fs = require('fs');
+const jsonData = readFileSync('data.json', 'utf8');
+console.log(jsonData)
