@@ -1,5 +1,3 @@
-let namesList;
-
 var data;
 fetch("../data.json", {
      headers: {
@@ -24,7 +22,7 @@ let singularDescription;
 let englishNames;
 let translatedName;
 let language;
-let studyList;
+let studyList = [];
 
 let correctCounter = 0;
 let incorrectCounter = 0;
@@ -54,12 +52,30 @@ function checkGuess () {
     var guess = ((document.getElementById("guessInput").value).toLowerCase()).replace(/\s+/g, '');
     for(var i = 0; i < englishNames.length; i++) {
         if(guess == (englishNames[i].toLowerCase()).replace(/\s+/g, '')) {
-            newName();
-            correctCounter++;
-            document.getElementById("guessInput").value = "";
+            correctGuess();
         }
     }
 }
+function correctGuess() {
+    document.getElementById("guessInput").style.backgroundColor="green";
+    document.getElementById("guessInput").readOnly = true; 
+    correctCounter++;
+    
+    setTimeout(function() {
+        newName();
+        document.getElementById("guessInput").value = "";
+        document.getElementById("guessInput").style.backgroundColor="";
+        document.getElementById("guessInput").readOnly = false; 
+    }, 400);
+
+    
+
+}
 function studyLater () {
-    studyList.push(translatedName);
+    for(var i = 0; i < studyList.length; i++) {
+        if(studyList[i] == peopleIndex) {
+            return;
+        }
+    }
+    studyList.push(peopleIndex);
 }

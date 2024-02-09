@@ -56,3 +56,6 @@ input {
     border-style: solid;
     border-color: white;
 }
+button:hover {
+    background-color: rgba(128, 128, 128, 0.5);;
+}
