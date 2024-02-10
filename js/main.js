@@ -70,11 +70,15 @@ function guessAnimation() {
 }
 function correctGuess() {
     correctCounter++;
+    document.getElementById("correctGuessCounter").textContent=correctCounter;
+
     document.getElementById("guessInput").style.backgroundColor="green";
     guessAnimation();
 }
 function abandonAllHope() {
     incorrectCounter++;
+    document.getElementById("incorrectGuessCounter").textContent=incorrectCounter;
+
     document.getElementById("guessInput").value = englishNames;
     document.getElementById("guessInput").style.backgroundColor="red";
     guessAnimation();
