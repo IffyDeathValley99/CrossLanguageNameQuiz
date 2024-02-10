@@ -9,14 +9,15 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
   }
 button {
-  font-size: x-large;
-  margin-top: 1.5vh;
-  width: 50vh;
-  height: 10vh;
-  border-radius: 4vh;
-  border-width: 3px;
-  border-style: solid;
-  transition: 0.15s;
+    margin-top: 2.5vh;
+    width: 60vh;
+    height: 10vh;
+    font-size: 24pt;
+    border-radius: 10px;
+    text-align: center;
+    border-width: 0.25px;   
+    border-style: solid;
+    border-color: white;
 }
 button:hover {
   background-color: rgb(31,32,34);
@@ -26,4 +27,7 @@ button:hover {
   margin-top: 0px;
   margin-bottom: 0px;
   flex-direction: column;
+}
+p {
+  font-size: 16pt;
 }

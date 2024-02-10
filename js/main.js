@@ -43,7 +43,7 @@ function newName () {
     }
 
     englishNames = data[peopleIndex].names;
-    translatedName = data[peopleIndex].japanesenam;
+    translatedName = data[peopleIndex].japanesename;
     singularDescription = data[peopleIndex].description;
 
     document.getElementById("nameOutput").textContent = translatedName;
