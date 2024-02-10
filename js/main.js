@@ -12,7 +12,7 @@ fetch("../data.json", {
 }).then(function(res) {
      // Initiate data and start game
      data = res;
-     setLanguages(), newName();
+     setLanguage(), newName();
 }).catch(function(err) {
      console.log("FETCH ERROR: " + err);
 });
@@ -30,8 +30,8 @@ let incorrectCounter = 0;
 function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min + 0.5);
 }
-function setLanguages () {
-    language = "Japanese";
+function setLanguage () {
+    language = "japanesename";
     // Set currentPeople
 }
 function newName () {
@@ -41,8 +41,9 @@ function newName () {
         peopleIndex = save;
         return newName();
     }
+
     englishNames = data[peopleIndex].names;
-    translatedName = data[peopleIndex].japanesename;
+    translatedName = data[peopleIndex].japanesenam;
     singularDescription = data[peopleIndex].description;
 
     document.getElementById("nameOutput").textContent = translatedName;
@@ -72,7 +73,7 @@ function correctGuess() {
     document.getElementById("guessInput").style.backgroundColor="green";
     guessAnimation();
 }
-function giveUp() {
+function abandonAllHope() {
     incorrectCounter++;
     document.getElementById("guessInput").value = englishNames;
     document.getElementById("guessInput").style.backgroundColor="red";
