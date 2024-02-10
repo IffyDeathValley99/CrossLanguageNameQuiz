@@ -56,10 +56,9 @@ function checkGuess () {
         }
     }
 }
-function correctGuess() {
-    document.getElementById("guessInput").style.backgroundColor="green";
+function guessAnimation() {
     document.getElementById("guessInput").readOnly = true; 
-    correctCounter++;
+
     
     setTimeout(function() {
         newName();
@@ -67,9 +66,17 @@ function correctGuess() {
         document.getElementById("guessInput").style.backgroundColor="";
         document.getElementById("guessInput").readOnly = false; 
     }, 400);
-
-    
-
+}
+function correctGuess() {
+    correctCounter++;
+    document.getElementById("guessInput").style.backgroundColor="green";
+    guessAnimation();
+}
+function giveUp() {
+    incorrectCounter++;
+    document.getElementById("guessInput").value = englishNames;
+    document.getElementById("guessInput").style.backgroundColor="red";
+    guessAnimation();
 }
 function studyLater () {
     for(var i = 0; i < studyList.length; i++) {
