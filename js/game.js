@@ -7,7 +7,7 @@ fetch(language, {
     }
 }).then(function(res) {
     if(!res.ok) {
-        console.error("Failed to fetch language .json");
+        console.error("Failed to fetch language.json");
     }
     return res.json();
 }).then(function(res) {
@@ -75,9 +75,7 @@ function checkGuess () {
 }
 function guessAnimation() {
     document.getElementById("guessInput").readOnly = true; 
-
-    
-    setTimeout(function() {
+    window.setTimeout(function() {
         newName();
         document.getElementById("guessInput").value = "";
         document.getElementById("guessInput").style.backgroundColor="";
@@ -100,10 +98,8 @@ function abandonAllHope() {
     guessAnimation();
 }
 function studyLater () {
-    for(var i = 0; i < studyList.length; i++) {
-        if(studyList[i] == peopleIndex) {
-            return;
-        }
+    if(studyList.indexOf(peopleIndex) > -1) {
+        return;
     }
     studyList.push(peopleIndex);
 }
