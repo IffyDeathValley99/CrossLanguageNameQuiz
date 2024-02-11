@@ -14,13 +14,24 @@
         <p>
             A fun game where you study both people and language skills at the same time!
         </p>
-        <P>
-            You'll be given somebody's name in Japanese and from this and a description you will have to guess the person's name in english.
-        </P>
+        <p>
+            You'll be given somebody's name in a language of your choosing and from this and a description you will have to guess the person's name in English.
+        </p>
+          <p>
+
+          </p>
         <button onclick="location.href='game.html'">
             Start Game
         </button>
+        <p>
+
+        </p>
+        <select id="languageDropdown" onchange="newChoice()">
+            <option value="Japanese">Japanese</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Hindi">Hindi</option>
+        </select>
     </div>
 </body>
-
+<script src="js/language.js"></script>
 </html>

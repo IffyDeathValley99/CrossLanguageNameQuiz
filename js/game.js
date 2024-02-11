@@ -1,5 +1,25 @@
+var language = sessionStorage.getItem("sessionLanguage");
+var dataTranslated;
+fetch(language, {
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+}).then(function(res) {
+    if(!res.ok) {
+        console.error("Failed to fetch language .json");
+    }
+    return res.json();
+}).then(function(res) {
+    // Initiate data and start game
+    dataTranslated = res;
+}).catch(function(errerr) {
+    console.log("FETCH ERROR: " + err);
+});
+
+
 var data;
-fetch("../data.json", {
+fetch("./data/data.json", {
      headers: {
          'Content-Type': 'application/json',
          'Accept': 'application/json'
@@ -12,7 +32,7 @@ fetch("../data.json", {
 }).then(function(res) {
      // Initiate data and start game
      data = res;
-     setLanguage(), newName();
+     newName();
 }).catch(function(err) {
      console.log("FETCH ERROR: " + err);
 });
@@ -21,7 +41,6 @@ let peopleIndex;
 let singularDescription;
 let englishNames;
 let translatedName;
-let language;
 let studyList = [];
 
 let correctCounter = 0;
@@ -29,10 +48,6 @@ let incorrectCounter = 0;
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min + 0.5);
-}
-function setLanguage () {
-    language = "japanesename";
-    // Set currentPeople
 }
 function newName () {
     var save = peopleIndex;
@@ -43,8 +58,9 @@ function newName () {
     }
 
     englishNames = data[peopleIndex].names;
-    translatedName = data[peopleIndex].japanesename;
     singularDescription = data[peopleIndex].description;
+
+    translatedName = dataTranslated[peopleIndex].translatedname;
 
     document.getElementById("nameOutput").textContent = translatedName;
     document.getElementById("descriptionOutput").textContent = singularDescription;
