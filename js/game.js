@@ -1,4 +1,5 @@
 var language = sessionStorage.getItem("sessionLanguage");
+
 var dataTranslated;
 fetch(language, {
     headers: {
@@ -13,7 +14,7 @@ fetch(language, {
 }).then(function(res) {
     // Initiate data and start game
     dataTranslated = res;
-}).catch(function(errerr) {
+}).catch(function(err) {
     console.log("FETCH ERROR: " + err);
 });
 
@@ -41,7 +42,8 @@ let peopleIndex;
 let singularDescription;
 let englishNames;
 let translatedName;
-let studyList = [];
+let studyMode = false; 
+sessionStorage.setItem("studyList", []);
 
 let correctCounter = 0;
 let incorrectCounter = 0;
@@ -50,20 +52,32 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min + 0.5);
 }
 function newName () {
-    var save = peopleIndex;
-    peopleIndex = random(0, data.length - 1);
-    if(peopleIndex === save) {
-        peopleIndex = save;
-        return newName();
+    if (studyMode == false) {
+        var save = peopleIndex;
+        peopleIndex = random(0, data.length - 1);
+        if(peopleIndex === save) {
+            peopleIndex = save;
+            return newName();
+        }
+    
+        englishNames = data[peopleIndex].names;
+        singularDescription = data[peopleIndex].description;
+    
+        translatedName = dataTranslated[peopleIndex].translatedname;
+    
+        document.getElementById("nameOutput").textContent = translatedName;
+        document.getElementById("descriptionOutput").textContent = singularDescription;
+
+    } else if (studyMode == true) {
+
+        var save = peopleIndex;
+        peopleIndex = random(0, data.length - 1);
+        if(peopleIndex === save) {
+            peopleIndex = save;
+            return newName();
+        }
     }
 
-    englishNames = data[peopleIndex].names;
-    singularDescription = data[peopleIndex].description;
-
-    translatedName = dataTranslated[peopleIndex].translatedname;
-
-    document.getElementById("nameOutput").textContent = translatedName;
-    document.getElementById("descriptionOutput").textContent = singularDescription;
 }
 function checkGuess () {
     var guess = ((document.getElementById("guessInput").value).toLowerCase()).replace(/\s+/g, '');
@@ -95,15 +109,27 @@ function abandonAllHope() {
     incorrectCounter++;
     document.getElementById("incorrectGuessCounter").textContent=incorrectCounter;
 
-    document.getElementById("guessInput").value = englishNames;
+    if (englishNames.length > 2) {
+        document.getElementById("guessInput").value = englishNames[0]+", "+englishNames[1]+"...";
+    } else {
+        document.getElementById("guessInput").value = englishNames;
+    }
+    
     document.getElementById("guessInput").style.backgroundColor="red";
     guessAnimation();
 }
 function studyLater () {
+    var studyList = sessionStorage.getItem("studyList");
+
     for(var i = 0; i < studyList.length; i++) {
         if(studyList[i] == peopleIndex) {
             return;
         }
     }
     studyList.push(peopleIndex);
+}
+function studyNow () {
+    studyMode = true; 
+    peopleIndex = "";
+    // newName();
 }
