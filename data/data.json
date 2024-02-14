@@ -1,21 +1,82 @@
 [
     {
-        "names": ["Mohatma Ghandi", "Mahatma Ghandi", "Mahatma Gandhi", "Mohatma Gandhi", "Mohandas Gandhi", "Mohandas Ghandi", "Ghandi"],
-        "description": "An Indian lawyer, anti-colonial nationalist and political ethicist who employed nonviolent resistance to lead the successful campaign for India's independence from British rule."       
+        "names": ["Sejong"],
+        "description": "King Sejong the Great was the fourth king of the Joseon dynasty of Korea. He is best known for his promulgation of the Korean alphabet, Hangul, which he created to promote literacy among the common people."
     },
     {
-        "names": ["God"],
-        "description": "One of the gods of all time"
+        "names": ["Douglas MacArthur"],
+        "description": "Douglas MacArthur was an American five-star general and Field Marshal of the Philippine Army. He played a prominent role in the Pacific theater during World War II and the Korean War."
+    },
+    {
+        "names": ["Kim Il Sung"],
+        "description": "Kim Il Sung was the founder and first leader of North Korea, ruling from its establishment in 1948 until his death in 1994. He is considered the country's eternal president."
+    },
+    {
+        "names": ["Syngman Rhee"],
+        "description": "Syngman Rhee was a South Korean politician who served as the first President of South Korea from 1948 to 1960. He was a strong anti-communist and led South Korea through the Korean War."
+    },
+    {
+        "names": ["Kim Jong Il"],
+        "description": "Kim Jong Il was the Supreme Leader of North Korea from 1994 to 2011. He succeeded his father, Kim Il Sung, and was known for his repressive rule and pursuit of nuclear weapons."
+    },
+    {
+        "names": ["Srivijaya"],
+        "description": "Srivijaya was a powerful ancient thalassocratic Malay empire based on the island of Sumatra, Indonesia, which influenced much of Southeast Asia."
+    },
+    {
+        "names": ["Anawrahta"],
+        "description": "Anawrahta was the founder of the Pagan Empire in Myanmar. He unified the country and helped spread Theravada Buddhism throughout the region."
+    },
+    {
+        "names": ["Trung sisters"],
+        "description": "The Trung sisters, Trưng Trắc and Trưng Nhị, were Vietnamese military leaders who led a rebellion against Chinese rule in the first century AD. They are regarded as national heroines of Vietnam."
+    },
+    {
+        "names": ["Angkor"],
+        "description": "The Angkor civilization was a powerful empire that ruled over much of Southeast Asia from the 9th to the 15th centuries. It is known for its impressive architecture, including Angkor Wat."
+    },
+    {
+        "names": ["Chakkri family"],
+        "description": "The Chakkri dynasty is the current ruling royal house of Thailand, founded by King Rama I in 1782. The dynasty is known for its role in modernizing Thailand and maintaining its independence."
+    },
+    {
+        "names": ["Emilio Aguinaldo"],
+        "description": "Emilio Aguinaldo was a Filipino revolutionary, politician, and military leader who is officially recognized as the first President of the Philippines, leading the country's fight for independence from Spain."
+    },
+    {
+        "names": ["Aung San"],
+        "description": "Aung San was a Burmese revolutionary, nationalist, and founder of the modern Burmese army. He is considered the Father of the Nation in Myanmar for his role in securing independence from British colonial rule."
+    },
+    {
+        "names": ["Sukarno"],
+        "description": "Sukarno was the first President of Indonesia, serving from 1945 to 1967. He was a prominent leader in the country's fight for independence from Dutch colonial rule."
+    },
+    {
+        "names": ["Ne Win"],
+        "description": "Ne Win was a Burmese politician and military commander who ruled Myanmar from 1962 to 1988. His rule was marked by economic mismanagement and authoritarianism."
+    },
+    {
+        "names": ["Lee Kuan Yew"],
+        "description": "Lee Kuan Yew was the first Prime Minister of Singapore, serving from 1959 to 1990. He is credited with transforming Singapore from a small, underdeveloped country into a prosperous global hub."
+    },
+    {
+        "names": ["Ferdinand Marcos"],
+        "description": "Ferdinand Marcos was the President of the Philippines from 1965 to 1986. His regime was marked by corruption, human rights abuses, and martial law."
+    },
+    {
+        "names": ["Corazon Aquino"],
+        "description": "Corazon Aquino was a Filipino politician who served as the 11th President of the Philippines, becoming the first woman to hold that office in the country and in Asia."
+    },
+    {
+        "names": ["Ho Chi Minh"],
+        "description": "Ho Chi Minh was a Vietnamese communist revolutionary and politician who served as the President of North Vietnam from 1945 to 1969. He led the Viet Minh independence movement against French colonial rule and later the American-backed government in South Vietnam."
+    },
+    {
+        "names": ["Ngo Dinh Diem"],
+        "description": "Ngo Dinh Diem was the President of South Vietnam from 1955 until his assassination in 1963. His rule was marked by corruption, nepotism, and repression, leading to his eventual overthrow."
+    },
+    {
+        "names": ["Pol Pot"],
+        "description": "Pol Pot was the leader of the Khmer Rouge and the Prime Minister of Democratic Kampuchea from 1976 to 1979. His regime is remembered for its brutal policies that led to the deaths of millions of Cambodians."
     }
 ]
-
-
-
-
-
-
-
-
-     
-
-
