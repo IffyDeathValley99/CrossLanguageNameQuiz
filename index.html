@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Thingy</title>
+    <title>Select Game</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div id="main-div" style="height: 100vh;">
         <h1>
-            Cross Language Name Quiz (CLNQ)
+            Study Game Suite
         </h1>
         <p>
-            A fun game where you study both people and language skills at the same time!
-            *If the names do not load reload the page
+            Study for your <em>favorite</em> classes with this great study tool. (Objective opionion obviously)
         </p>
         <p>
             You'll be given somebody's name in a language of your choosing and from this and a description you will have to guess the person's name in English.
         </p>
-            <br>
-        <button onclick="location.href='game.html'">
+        <button onclick="location.href='gameTitle.html'">
             Start Game
         </button>
         <p>
 
         </p>
-        <select id="languageDropdown" onchange="newChoice()">
-            <option value="Japanese">Japanese</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Vietnamese">Vietnamese</option>
+        <select required id="languageDropdown" onchange="newGameDescription()">
+            <option class="placeholder" selected disabled value=" clnq">Choose Game</option>
+            <option value="clnq">Cross Language Name Quiz</option>
         </select>
     </div>
 </body>
-<script src="js/language.js"></script>
+<script src="js/title.js"></script>
 </html>
