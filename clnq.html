@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="margin-top: 0px;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/clnqGame.css">
+
+</head>
+<body>
+    <div class="top-bar">
+        <p id="correctGuessCounter" class="top-bar-element">
+            0
+        </p>
+        <p class="top-bar-element" >
+            &#10004; 
+        </p>
+        <p id="incorrectGuessCounter" class="top-bar-element">
+            0
+        </p>
+        <p class="top-bar-element">
+            <b>X</b> 
+        </p>
+
+    </div>
+
+    <div class="game-grid">
+        <h1 class="game-grid-element" id="nameOutput">
+            Person's Name
+        </h1>
+        <h3 class="game-grid-element">
+            - Description -
+        </h3>
+        <p class="game-grid-element" id="descriptionOutput">
+            Description here that is very long and contains many lines of description that I must describe Description here that is very long and contains many lines of description that I must describe
+        </p>
+        <div class="action-button-grid">
+            <div>
+                <button class="action-button" onclick="abandonAllHope()">
+                    Don't Know
+                </button>
+                <button class="action-button" onclick="studyLater()">
+                    Study Later
+                </button>
+    
+            </div>
+            <div>
+                <button class="action-button" onclick="studyNow()">
+                    Study NOW
+                </button>
+                <button class="action-button" onclick="location.href='gameTitle.html'">
+                    Quit
+                </button>
+            </div>
+        </div>
+        <h3 class="input-title">
+            Native Language Name
+        </h3>
+        <input class="game-grid-element" id="guessInput" oninput="checkGuess()">
+
+
+    </div>
+</body>
+<script src="js/clnqGame.js"></script>
+</html>

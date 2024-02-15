@@ -1,7 +1,8 @@
-var language = sessionStorage.getItem("sessionLanguage");
+var languageFile = sessionStorage.getItem("sessionLanguageFile");
+var unitFolder = sessionStorage.getItem("sessionUnitFolder");
 
 var dataTranslated;
-fetch(language, {
+fetch(languageFile, {
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -20,7 +21,7 @@ fetch(language, {
 
 
 var data;
-fetch("./data/data.json", {
+fetch(unitFolder + "data.json", {
      headers: {
          'Content-Type': 'application/json',
          'Accept': 'application/json'
