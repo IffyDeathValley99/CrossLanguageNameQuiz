@@ -68,7 +68,8 @@ let singularDescription; // The singular description of the current person
 let englishNames; // English names of all the current people
 let translatedName; // Translated names of all the current people
 let studyMode = false;  // Tracks if studyMode is on which is the user created list for studying
-sessionStorage.setItem("studyList", []); // Saves the study list to session storage
+let studyList = [[],[],[]]; // The list for items to be studied later
+sessionStorage.setItem("studyList", studyList); // Saves the study list to session storage
 
 // Correct and incorrect counters for questions
 let correctCounter = 0;
@@ -103,13 +104,20 @@ function newName () {
 
     } else if (studyMode == true) {
 
-        // Doesnt really do much different rn
         var save = peopleIndex;
-        peopleIndex = random(0, data.length - 1);
+        peopleIndex = random(0, studyList[0].length - 1);
         if(peopleIndex === save) {
             peopleIndex = save;
             return newName();
         }
+
+        englishNames = studyList[1][peopleIndex];
+        singularDescription = studyList[2][peopleIndex];
+    
+        translatedName = dataTranslated[studyList[0][peopleIndex]].translatedname;
+
+        document.getElementById("nameOutput").textContent = translatedName + " (Study Mode)";
+        document.getElementById("descriptionOutput").textContent = singularDescription;
     }
 
 }
@@ -128,7 +136,6 @@ function checkGuess () {
 function guessAnimation() {
     document.getElementById("guessInput").readOnly = true; 
     window.setTimeout(function() {
-        newName();
         document.getElementById("guessInput").value = "";
         document.getElementById("guessInput").style.backgroundColor="";
         document.getElementById("guessInput").readOnly = false; 
@@ -142,6 +149,9 @@ function correctGuess() {
 
     document.getElementById("guessInput").style.backgroundColor="green";
     guessAnimation();
+    window.setTimeout(function() {
+        newName();
+    }, 800);
 }
 
 // Is called when the user gives up
@@ -157,20 +167,52 @@ function abandonAllHope() {
     
     document.getElementById("guessInput").style.backgroundColor="red";
     guessAnimation();
+    window.setTimeout(function() {
+        newName();
+    }, 800);
 }
 
 // Adds the current person to the studyList
 function studyLater () {
-    if(studyList.indexOf(peopleIndex) > -1) {
-        return;
+    if (studyMode == false) {
+        if(studyList.indexOf(peopleIndex) > -1) {
+            return;
+        }
+    
+        studyList[0].push(peopleIndex);
+        studyList[1].push(englishNames);
+        studyList[2].push(singularDescription);
+    } else if (studyMode == true) {
+        // Quit study mode
+        
+        studyMode = false;
+        newName();
     }
-    studyList.push(peopleIndex);
+
 }
 
 // Will do more stuff soon
 function studyNow () {
-    studyMode = true; 
-    peopleIndex = "";
-    // newName();
-}
+    if (studyMode == false && studyList[0].length != 0) {
+        studyMode = true; 
+        peopleIndex = null;
+        document.getElementById("studyLaterButton").style.display="none"; 
+        document.getElementById("studyNowButton").textContent="Quit Study Mode";
+        newName();
+    } else if(studyMode == true) {
+        studyMode = false; 
+        peopleIndex = null;
+        document.getElementById("studyLaterButton").style.display="inline-block";
+        document.getElementById("studyNowButton").textContent="Study Later"; 
+        newName();
+    } else if (studyList[0].length == 0) {
+        document.getElementById("guessInput").value = "Add something to the study list...";
+        document.getElementById("guessInput").style.backgroundColor="red";
+        guessAnimation();
+    }
 
+
+
+
+
+}
