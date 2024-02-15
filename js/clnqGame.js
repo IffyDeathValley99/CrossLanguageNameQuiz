@@ -3,22 +3,41 @@ var unitFolder = sessionStorage.getItem("sessionUnitFolder");
 
 // Fetches the correct json file for the translated names
 var dataTranslated;
-fetch(languageFile, {
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    }
-}).then(function(res) {
-    if(!res.ok) {
-        console.error("Failed to fetch language.json");
-    }
-    return res.json();
-}).then(function(res) {
-    // Initiate data and start game
-    dataTranslated = res;
-}).catch(function(err) {
-    console.log("FETCH ERROR: " + err);
-});
+if (languageFile != "none") {
+    fetch(languageFile, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }).then(function(res) {
+        if(!res.ok) {
+            console.error("Failed to fetch language.json");
+        }
+        return res.json();
+    }).then(function(res) {
+        // Initiate data and start game
+        dataTranslated = res;
+    }).catch(function(err) {
+        console.log("FETCH ERROR: " + err);
+    });
+} else {
+    fetch("./data/smile.json", {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }).then(function(res) {
+        if(!res.ok) {
+            console.error("Failed to fetch language.json");
+        }
+        return res.json();
+    }).then(function(res) {
+        // Initiate data and start game
+        dataTranslated = res;
+    }).catch(function(err) {
+        console.log("FETCH ERROR: " + err);
+    });
+}
 
 // Fetches the correct json file for the english names and definitions
 var data;
@@ -110,7 +129,7 @@ function guessAnimation() {
         document.getElementById("guessInput").value = "";
         document.getElementById("guessInput").style.backgroundColor="";
         document.getElementById("guessInput").readOnly = false; 
-    }, 400);
+    }, 600);
 }
 
 // Does the right stuff on a correct guess

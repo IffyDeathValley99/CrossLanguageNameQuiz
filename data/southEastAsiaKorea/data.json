@@ -4,7 +4,7 @@
         "description": "The fourth king of the Joseon dynasty of Korea. He is best known for his promulgation of the Korean alphabet, Hangul, which he created to promote literacy among the common people."
     },
     {
-        "names": ["Douglas MacArthur"],
+        "names": ["Douglas MacArthur", "General MacArthur", "General Douglas MacArthur", "MacArthur"],
         "description": "An American five-star general and Field Marshal of the Philippine Army. He played a prominent role in the Pacific theater during World War II and the Korean War."
     },
     {
@@ -36,7 +36,7 @@
         "description": "A powerful empire that ruled over much of Southeast Asia from the 9th to the 15th centuries. It is known for its impressive architecture, including Angkor Wat."
     },
     {
-        "names": ["Chakkri family"],
+        "names": ["Chakkri family", "Chakkri"],
         "description": "The current ruling royal house of Thailand, founded by King Rama I in 1782. The dynasty is known for its role in modernizing Thailand and maintaining its independence."
     },
     {
@@ -64,7 +64,7 @@
         "description": "The President of the Philippines from 1965 to 1986. His regime was marked by corruption, human rights abuses, and martial law."
     },
     {
-        "names": ["Corazon Aquino"],
+        "names": ["Corazon Aquino", "Corazon"],
         "description": "A Filipino politician who served as the 11th President of the Philippines, becoming the first woman to hold that office in the country and in Asia."
     },
     {
@@ -72,7 +72,7 @@
         "description": "A Vietnamese communist revolutionary and politician who served as the President of North Vietnam from 1945 to 1969. He led the Viet Minh independence movement against French colonial rule."
     },
     {
-        "names": ["Ngo Dinh Diem"],
+        "names": ["Ngo Dinh Diem", "Diem"],
         "description": "The President of South Vietnam from 1955 until his assassination in 1963. His rule was marked by corruption, nepotism, and repression, leading to his eventual overthrow."
     },
     {
