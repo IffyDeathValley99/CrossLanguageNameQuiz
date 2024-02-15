@@ -129,7 +129,7 @@ function guessAnimation() {
         document.getElementById("guessInput").value = "";
         document.getElementById("guessInput").style.backgroundColor="";
         document.getElementById("guessInput").readOnly = false; 
-    }, 600);
+    }, 800);
 }
 
 // Does the right stuff on a correct guess
@@ -170,3 +170,5 @@ function studyNow () {
     peopleIndex = "";
     // newName();
 }
+
+newName();

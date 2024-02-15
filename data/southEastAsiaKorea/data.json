@@ -1,6 +1,6 @@
 [
     {
-        "names": ["Sejong"],
+        "names": ["Sejong", "King Sejong"],
         "description": "The fourth king of the Joseon dynasty of Korea. He is best known for his promulgation of the Korean alphabet, Hangul, which he created to promote literacy among the common people."
     },
     {
@@ -32,8 +32,8 @@
         "description": "Vietnamese military leaders who led a rebellion against Chinese rule in the first century AD. They are regarded as national heroines of Vietnam."
     },
     {
-        "names": ["Angkor"],
-        "description": "A powerful empire that ruled over much of Southeast Asia from the 9th to the 15th centuries. It is known for its impressive architecture, including Angkor Wat."
+        "names": ["Angkor", "Khmer"],
+        "description": "A powerful empire that ruled over much of Southeast Asia from the 9th to the 15th centuries. It is known for its impressive architecture, including ____ Wat."
     },
     {
         "names": ["Chakkri family", "Chakkri"],
@@ -60,7 +60,7 @@
         "description": "The first Prime Minister of Singapore, serving from 1959 to 1990. He is credited with transforming Singapore from a small, underdeveloped country into a prosperous global hub."
     },
     {
-        "names": ["Ferdinand Marcos"],
+        "names": ["Ferdinand Marcos", "Ferdinand"],
         "description": "The President of the Philippines from 1965 to 1986. His regime was marked by corruption, human rights abuses, and martial law."
     },
     {
