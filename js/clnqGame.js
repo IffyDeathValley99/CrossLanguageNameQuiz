@@ -19,6 +19,7 @@ if (languageFile != "none") {
         dataTranslated = res;
     }).catch(function(err) {
         console.log("FETCH ERROR: " + err);
+        window.location.reload();
     });
 } else {
     fetch("./data/smile.json", {
