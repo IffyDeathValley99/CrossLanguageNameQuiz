@@ -36,6 +36,7 @@ if (languageFile != "none") {
         dataTranslated = res;
     }).catch(function(err) {
         console.log("FETCH ERROR: " + err);
+        window.location.reload();
     });
 }
 
@@ -57,6 +58,7 @@ fetch(unitFolder + "data.json", {
      newName();
 }).catch(function(err) {
      console.log("FETCH ERROR: " + err);
+     window.location.reload();
 });
 
 // Declares various variables
@@ -171,4 +173,3 @@ function studyNow () {
     // newName();
 }
 
-newName();
